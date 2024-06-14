@@ -26,6 +26,17 @@ public class Message implements Serializable {
     @Column(columnDefinition = "TEXT")
     @SerializedName("positions")
     private String positions;
+    @Lob
+    @Column(columnDefinition = "TEXT")
+    private String laserWay;
+
+    public String getLaserWay() {
+        return laserWay;
+    }
+
+    public void setLaserWay(String laserWay) {
+        this.laserWay = laserWay;
+    }
 
     public Long getId() {
         return id;
